@@ -1,13 +1,6 @@
-# .travis.yml file
-language: node_js
-node_js:
-
-  - "12"
-
-services: mongodb  
-cache:  
-  directories:
-    - "node_modules"
-install:
-  - npm install
-script:
+echo "Installing 'node-cmd'"
+npm install node-cmd
+echo "Installing 'node-ssh'"
+npm install node-ssh
+echo "Running 'deploy.js'"
+node deploy.js
